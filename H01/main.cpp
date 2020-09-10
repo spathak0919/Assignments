@@ -1,13 +1,31 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           Sandesh Pathak
+// Email:            spathak0919@my.msutexas.edu
+// Label:            L02
+// Title:            Code 
+// Course:           2143
+// Semester:         Fall 2020
+//
+// Description:
+//       Main driver of my list program
+//
+// Usage:
+//       Nothing special right now.
+//
+// Files:            
+//       None
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 
 using namespace std;
 
-int A[100];
+int A[100];         // A is an array of 100 integers
 
-struct Node
+struct Node         // struc a data variable for node
 {
-    int x;
-    Node *next;
+    int x;          // initialize x as an integer
+    Node *next;     // next address
     Node()
     {
         x = -1;
@@ -20,21 +38,21 @@ struct Node
     }
 };
 
-class List
+class List          // create class
 {
-  private:
-    Node *Head;
-    Node *Tail;
-    int Size;
+  private:          // default constructor
+    Node *Head;     // pointer variable with name Head
+    Node *Tail;     // pointer variable with name Tail
+    int Size;       // initialize size as an integer
 
-  public:
+  public:           // parameterized constructor
     List()
     {
         Head = Tail = NULL;
-        Size = 0;
+        Size = 0;               // initialize size value 0
     }
 
-    void Push(int val)
+    void Push(int val)          // void function Push
     {
         // allocate new memory and init node
         Node *Temp = new Node(val);
@@ -51,7 +69,7 @@ class List
         Size++;
     }
 
-    void Insert(int val)
+    void Insert(int val)    // void function Insert
     {
         // allocate new memory and init node
         Node *Temp = new Node(val);
@@ -67,7 +85,7 @@ class List
         Size++;
     }
 
-    void PrintTail()
+    void PrintTail()    // void Function PrintTail
     {
         cout << Tail->x << endl;
     }
@@ -86,7 +104,7 @@ class List
         return list;
     }
 
-    // not implemented 
+    // not implemented
     int Pop()
     {
         Size--;
