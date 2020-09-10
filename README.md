@@ -3,4 +3,4 @@
 #### Email: spathak0919@my.msutexas.edu
 #### Website: NONE
 
-#### Avatar:(https://www.meme-arsenal.com/en/create/template/1769770)
+#### Avatar:https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/einstein_avatar.png
