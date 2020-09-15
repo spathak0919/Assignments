@@ -51,10 +51,15 @@ using namespace std;
  */
 class Stack {
 private:
-    int *S;       //array pointer
-    int capacity; //max stack size
-    int top;      //current top (index)
-    int size;     //current num items
+    int *S;         //array pointer
+    int capacity;   //max stack size
+    int top;        //current top (index)
+    int size;       //current num items
+    int StartSize;  // initial capacity
+    int MaxSize=0;  // initialize maxsize =0
+    int LastSize;  //final capacity
+    int DoubledAlready =0;
+
 public:
     /**
      * Stack:
@@ -70,6 +75,7 @@ public:
         S = new int[capacity];  // allocate new memory
         top = -1;               // initialize top of stack
         size = 0;               // set stack to empty
+        StartSize=capacity;     //start size of array
     }
 
     /**
@@ -86,6 +92,7 @@ public:
         S = new int[capacity];  // allocate new memory
         top = -1;               // initialize top of stack
         size = 0;               // set stack to empty
+        StartSize=capacity;     // start size of array
     }
 
     /**
@@ -108,7 +115,14 @@ public:
          }
          delete[] S;
          S= newstack;
+         cout <<"+:" << capacity << "->" <<capacity*2;
          capacity=capacity*2;
+
+         if (capacity >MaxSize)
+         {
+           MaxSize=capacity;
+         }
+         DoubledAlready++;
        }
         top++;              // move top of stack up
         size++;             // increment size
@@ -134,6 +148,19 @@ public:
         int data = S[top];  // pull item from stack
         top--;              // shrink the stack
         size--;             // update our size
+
+        if((DoubledAlready>0)&& (size<capacity/2))
+        {
+          int*newStack=new int[capacity/2];
+          for(int i =0;i<capacity/2;i++)
+          {
+            newStack[i]=S[i];
+          }
+          delete[] S;
+          S=newStack;
+          cout <<"-:"<<capacity<<"->"<<capacity/2<<endl;
+          capacity/=2;
+        }
         return data;        // send item back
     }
 
@@ -191,35 +218,103 @@ public:
      *     ostream 
      */
     friend ostream &operator<<(ostream &os, const Stack s)
-     {
-        for (int i = s.top; i >= 0; i--) {
+    {
+      os<<"Overlaoded"<<endl;
+    
+     
+        for (int i = s.top; i >= 0; i--) 
+        {
             os << s.S[i] << endl;
         }
         return os;
+    }
+
+    /**
+    *getStartingSize:
+    *return starting size
+    *Parameters:
+    *void:
+
+    *Returns:
+    *int Starting size
+    */
+    int getStartSize()
+    {
+      return StartSize;  //return starting size
+    }
+
+    /*
+    *get maxSize:
+    * Return largest size of an array
+    *Parms:
+    *void
+
+    *returns:
+    *int MaxSize
+    */
+    int getMaxSize()
+
+    {
+      return MaxSize;   //return max size
+    }
+
+    /*
+    *get lastSize:
+    * Return final size of an array
+    *Parms:
+    *void
+
+    *returns:
+    *int lastSize
+    */
+    int getlastsize()
+    {
+      return capacity;  // final size of na array
     }
 };
 
 int main()
 {
-    Stack S1;           // calls default constructor
+   
    ifstream infile;
-    infile.open("sandesh.txt");
-    string PushOrPop;                    
-    int value;                              
-    while (infile >> PushOrPop)            
+    infile.open("input.txt");     //input file
+
+  ofstream outfile;
+  outfile.open("output.txt");     // output file
+
+    cout <<"Name : Sandesh Pathak"<<endl;
+    cout<<" Program: P01"<<endl;
+    cout<<" Date:15 sep 2020"<<endl;
+    string var;                    
+    int number;  
+    
+    Stack S1;     //default constructor called
+    while(infile>> var)
     {
-        if (PushOrPop == "push")            //reads push
-        {
-            infile >> value;                 
-            S1.Push(value);      
-        }
-        if (PushOrPop == "pop")            //reads pop
-        {
-            S1.Pop();                 
-        }
+      if(var == "pop")
+      {
+        S1.Pop();
+      }
+      else if (var == "push")
+      {
+      infile >>number;
+      S1.Push(number);
+      }
     }
-    infile.close();                         //close file
-    S1.Print();                              //prints stack 
+   
+    cout << S1 <<endl;
+
+    outfile<< "Name : Sandesh Pathak"<<endl;
+    outfile<<"Program: P01"<<endl;
+    outfile<< "Date: 15 sep 2020"<<endl;
+    outfile<<endl;
+
+            outfile <<"Start size:" << S1.getStartSize()<<endl;
+            outfile <<"Max size:"<<S1.getMaxSize()<<endl;
+            outfile <<"Ending Size:"<<S1.getlastsize()<<endl;
+
+            infile.close();
+            outfile.close();
 
     return 0;
 }
