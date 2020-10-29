@@ -1,5 +1,5 @@
 
-## Sandesh Pathak
+# Sandesh Pathak
 
 ##### BLACKJACK 
 
@@ -7,10 +7,10 @@
 
 ### Class Card
 
-## Get value
-## Get suit 
-## Get rank
-## Set value
+##### Get value
+##### Get suit 
+##### Get rank
+##### Set value
 
 
 ###Class Deck
