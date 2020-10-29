@@ -5,18 +5,13 @@
 
 
 
-###Class Card
-Description:
- Data:
-Rank  
-Value 
+### Class Card
 
-Methods:
-#Set rank
-#Set value
-#Get rank
-#Get value
-#Print
+## Get value
+## Get suit 
+## Get rank
+## Set value
+
 
 ###Class Deck
 Description:
@@ -31,7 +26,7 @@ Reset - go back to initial state with all cards
 
 ###Class Hand
 Description:
-A container of cards (hmmmm... sound familiar to anyone?)
+A container of cards
 Data:
 Size - how many cards in deck
 Remaining - how many cards left
