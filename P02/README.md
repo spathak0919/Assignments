@@ -5,66 +5,68 @@
 
 
 
-Class Card Description
+###Class Card
+Description:
+ Data:
+Rank  
+Value 
 
-Represents Values for a card.
-Data
-
-Rank - card ranks
-Value - numerical value of card
-Methods
-
-SetRank
-SetValue
-GetRank
-GetValue
+Methods:
+Set rank
+Set value
+Get rank
+Get value
 Print
-Class Deck Description
 
+###Class Deck
+Description:
 A container of cards.
-Data
+Data:
+Size - how many cards in deck
+Remaining - how many cards left
+Methods:
+Deal - remove a card from the deck
+Shuffle - re-arrange the cards in some random fashion
+Reset - go back to initial state with all cards
 
-Size - number cards in deck
-Remaining - cards left in deck
-Methods
+###Class Hand
+Description:
+A container of cards (hmmmm... sound familiar to anyone?)
+Data:
+Size - how many cards in deck
+Remaining - how many cards left
+Methods:
+Shuffle - re-arrange the cards in some random fashion
+Sort - put cards in some order
+Discard - remove a card (based on some choice, not randomly like deal a card)
 
-Deal - Remove a card from the deck.
-Shuffle - Re-Arrange cards.
-Reset - Go back to initial state of deck.
-Class Hand Description
+###Class Player
+Description:
+Represents a single player as part of (in this case) a Black Jack game.
+Data:
+Bank - how much money she has
+Name - some identifier
+Hand - instance of a card container class
+Total - Total count of values of cards in hand ( WAIT!! ... does this belong here?)
 
-A container of cards.
-Data
+Methods:
+Bet - remove money from bank.
+Win - add money to bank.
+Hit - add a card to hand.
 
-Size
-Remaining
-Methods
+###Class Game
+Description:
+In charge of the black jack game.
+When the dealer deals.
+When the dealer hits.
+When the dealer awards winnings 
+Who gets the next card.
+Data:
+Players - Vector of player classes?
+Dealer - Dealer class? Or use player class?
+Deck - Does this go here?
 
-Shuffle - rearrange cards
-Sort - set cards in order
-Discard - remove card
-Class Player Description
-
-Class to represent a player
-Data
-
-Bank - player's money
-Name - player's name
-Hand - instance of hand class
-Methods
-
-Bet - subtract money
-Win - add money
-Hit - add deck to hand
-Class Game AI Description
-
-In charge of running the game
-Data
-
-Players - number of players playing
-Dealer - dealer info
-Methods
-
-Print - Prints to console
-deal - gets bets, distrubute cards
-newRound - begins round
+Methods:
+Print - prints current state to console
+AcceptBets - ??
+Deal - start round off
