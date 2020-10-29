@@ -12,11 +12,11 @@ Rank
 Value 
 
 Methods:
-Set rank
-Set value
-Get rank
-Get value
-Print
+#Set rank
+#Set value
+#Get rank
+#Get value
+#Print
 
 ###Class Deck
 Description:
