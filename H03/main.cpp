@@ -1,14 +1,17 @@
 void Hand::Sort()
 {
-
+  // loop to sort cards
   for(int i=0,i<Size(); i++)
   {
-    if(Cards[i]->rank > Cards[j]->rank)
+    for(int j=0,j<Size()-1; j++)
     {
-      cout <<"Swap";
+      
+    if(Cards[i]->rank > Cards[i+j]->rank)
+    {
+      cout <<"Swapping"<<endl;    
       Card*temp =Cards[i]
-       Cards[i] = Cards[j];
-      Cards[j] = temp;
+       Cards[i] = Cards[i+j];
+      Cards[i+j] = temp;
       
     }
   }   
