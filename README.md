@@ -9,4 +9,4 @@
 ## Assignments
 | Folder | Assignment | Description | Due|
  | ------------|------------|------------|------------|
- | [02-H01] | [ Homework 1 ](https://github.com/spathak0919/Assignments/tree/master/H01) | [ Basic Project Organization](https://github.com/rugbyprof/2143-Object-Oriented-Programming/tree/master/Assignments/02-H01) | [09-01-2020 (Tuesday @ 9:30 a.m.)](https://github.com/rugbyprof/2143-Object-Oriented-Programming/tree/master/Assignments/02-H01) |
+ | [02-H01] | [ Homework 1 ](https://github.com/spathak0919/Assignments/tree/master/H01) | [ Commenting Code](https://github.com/spathak0919/Assignments/tree/master/H01) | [09-01-2020 ](https://github.com/spathak0919/Assignments/tree/master/H01)
