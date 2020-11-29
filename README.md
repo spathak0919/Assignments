@@ -9,4 +9,4 @@
 ## Assignments
 | Folder | Assignment | Description | Due|
  | ------------|------------|------------|------------|
- | [H01] (https://github.com/spathak0919/Assignments/tree/master/H01)| [ Homework 1 ](https://github.com/spathak0919/Assignments/tree/master/H01) | [ Commenting Code](https://github.com/spathak0919/Assignments/tree/master/H01) | [09-01-2020 ](https://github.com/spathak0919/Assignments/tree/master/H01)
+ | [H01]| [ Homework 1 ](https://github.com/spathak0919/Assignments/tree/master/H01) | [ Commenting Code](https://github.com/spathak0919/Assignments/tree/master/H01) | [09-01-2020 ](https://github.com/spathak0919/Assignments/tree/master/H01)
